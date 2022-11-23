@@ -1,0 +1,68 @@
+/* Linked with main page */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+.box {
+    width: 300px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slide-img{
+    height: 450px;
+}
+
+.slide-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.detail-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.type{
+    display: flex;
+    flex-direction: column;
+}
+
+.type a{
+    color: #222222;
+    margin: 5px 0px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+}
+
+.text span{
+    color: rgba(26,26,26,0.5);
+}
+
+.price{
+    color: #333333;
+    font-weight: 700;
+    font-family: cursive;
+    letter-spacing: 0.5px;
+    
+}

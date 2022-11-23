@@ -24,7 +24,7 @@
     <input type="text" name="Uname" class="input-field" placeholder="User Id" required>
     <input type="password" name="Pass" class="input-field" placeholder="Enter Password" required>
     <input type="checkbox" class="check-box"> <span>Remember Password</span>
-    <button type="submit" name="log" class="submit-btn" onclick="myFunction">Log In</button>
+    <button type="submit" name="log" class="submit-btn" onclick="location.href='main.html';return false">Log In</button>
 </form>
 <form id="register" class="input-group">
     <input type="text" class="input-field" placeholder="User Id" required>
@@ -51,15 +51,6 @@
             y.style.left = "450px";
             z.style.left = "0px";
         }
-        function myFunction(){
-            var un = document.forms["myForm"]["Uname"].value;
-            var pw = document.forms["myForm"]["Pass"].value;
-if(un=="student" && pw=="1234")
-{
-    window.location.href="main.html";
-}
-else
-alert("Invalid username and Password");        }
     </script>
 </body>
 </html>
