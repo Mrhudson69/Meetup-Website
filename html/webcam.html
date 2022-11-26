@@ -16,19 +16,17 @@
         }
         #container{
             margin: 0px auto;
-            width: 500px;
-            height: 375px;
-            border: 2px solid black;
+            width: 720px;
+            height: 100vh;
         }
         #videoElement{
-            width: 500px;
-            height: 375px;
+            width: 100%;
+            height: 100%;
             background-color: #666;
         }
     </style>
 </head>
 <body>
-    <h1>Its for fun</h1>
     <div id="container">
         <video autoplay="true" id="videoElement"></video>
     </div>
@@ -37,7 +35,7 @@
     let video = document.querySelector("#videoElement");
 
     if (navigator.mediaDevices.getUserMedia) {
-navigator.mediaDevices.getUserMedia({video: true})
+navigator.mediaDevices.getUserMedia({video: true ,audio: true})
 .then (function(stream){
     video.srcObject = stream;
 })
