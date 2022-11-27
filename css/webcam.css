@@ -11,7 +11,8 @@
 .popup{
     background-color: #fb80c8;
     width: 90%;
-    height: 85%;
+    min-height: 100px;
+    overflow: hidden;
     padding: 30px 40px;
     position: absolute;
     text-align: center;
@@ -50,7 +51,7 @@
 
 body{
     margin: 50px;
-    font-size: 2em;
+    font-size: 30px;
     font-family: 'Love Ya Like A Sister', cursive;
 }
 
