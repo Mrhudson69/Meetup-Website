@@ -4,45 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/webcam.css">
     <title>Chat Page</title>
-    <style>
-        h1{
-            font-family: sans-serif;
-            color: #333;
-        }
-
-        body{
-            margin: 50px;
-        }
-        #container{
-            margin: 0px auto;
-            width: 720px;
-            height: 100vh;
-            border: 5px solid black;
-        }
-        #videoElement{
-            width: 100%;
-            height: 100%;
-            background-color: #666;
-        }
-        @media (max-width: 500px){
-            body{
-            margin: 2px;
-        }
-            #container{
-                width: 100%;
-                height: 100%;
-            }
-            #videoElement{
-            width: 100%;
-            height: 50%;
-            }
-        }
-    </style>
 </head>
 <body>
+    <div class="popup">
+        <button id="close">&times;</button>
+        <h1><span>&#9888;</span>Warning</h1>
+        <div>
+            <div>
+
+            </div>
+            <div>
+                <h2>Waiting?</h2>
+                <p>Maybe you see another popup after this, this is because the person you want to talk now is busy with makeup or any stuff. Don't panic you time will start when she joined call.</p>
+                <h2>Banned?</h2>
+                <p>You will be banned if you asked for whatsapp number or any other social media.</p>
+                <h2>Other issues?</h2>
+                <p>Contact Us if you have any other issues related to this website</p>
+                <button id="close">&times;</button>
+            </div>
+        </div>
+    </div>
     <div id="container">
-        <video autoplay="true" id="videoElement"></video>
+        <video autoplay="true" id="videoElement" class="child"></video>
+        <video autoplay="true" id="videoElement2" class="child"></video>
     </div>
 </body>
 <script>
@@ -60,5 +46,18 @@ navigator.mediaDevices.getUserMedia({video: true ,audio: true})
     } else{
         console.log("userMedia is not supported!")
     }
+
+
+    window.addEventListener("load", function(){
+        setTimeout(
+            function open(event){
+                document.querySelector(".popup").style.display = "block";
+            },
+            2500
+        )
+    });
+    document.querySelector("#close").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "none";
+    });
 </script>
 </html>
