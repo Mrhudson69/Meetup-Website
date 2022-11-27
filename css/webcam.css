@@ -72,19 +72,14 @@ body{
 }
 
 @media (max-width: 500px){
+    body{
+    margin: 2px;
+}
     #videoElement{
+        width: 150px;
         height: 250px;
-        width: 100px;
-        position: inherit;
-        margin-top: 500px;
-        z-index: 1;
-}
-#videoElement2{
-    height: 100%;
-    width: 100%;
-    position:absolute;
-    z-index: 3;
-}
+        float: right;
+    }
 }
 @media (max-width: 800px){
     #videoElement{
@@ -95,7 +90,7 @@ body{
         z-index: 1;
 }
 #videoElement2{
-    height: 100%x;
+    height: 600px;
     width: 100%;
     position:absolute;
     z-index: 3;
