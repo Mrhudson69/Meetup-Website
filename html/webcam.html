@@ -59,5 +59,9 @@ navigator.mediaDevices.getUserMedia({video: true ,audio: true})
     document.querySelector("#close").addEventListener("click", function(){
         document.querySelector(".popup").style.display = "none";
     });
+    function toggle(){
+        var blur = document.getElementById("container");
+        blur.classList.toggle("active")
+    }
 </script>
 </html>

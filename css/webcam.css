@@ -21,6 +21,10 @@
     border: 2px solid black;
 }
 
+.container#blur .active{
+    filter: blur(20px);
+}
+
 .popup button{
     display: block;
     margin: 0 0 20px auto;
@@ -65,7 +69,7 @@ body{
 }
 
 .child{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 355px;
     width: 40%;
     float: left;
@@ -74,15 +78,22 @@ body{
 
 @media (max-width: 500px){
     body{
+    font-size: 15px;
     margin: 2px;
+}
+.popup{
+    margin: 25px;
 }
     #videoElement{
         width: 150px;
-        height: 250px;
+        height: 350px;
         float: right;
     }
 }
 @media (max-width: 800px){
+    body{
+        font-size: 18px;
+    }
     #videoElement{
         height: 100px;
         width: 100px;
