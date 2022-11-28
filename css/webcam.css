@@ -18,6 +18,7 @@
     text-align: center;
     border-radius: 8px;
     display: none;
+    z-index: 5;
     border: 2px solid black;
 }
 
@@ -69,7 +70,7 @@ body{
 }
 
 .child{
-    /* border: 2px solid black; */
+    border: 2px solid black;
     height: 355px;
     width: 40%;
     float: left;
