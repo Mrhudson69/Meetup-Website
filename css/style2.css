@@ -1,123 +1,141 @@
-/* Linked with main page */
-body{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100;1,500&display=swap');
+
+*{
     margin: 0;
     padding: 0;
-    background-color: blanchedalmond;
-}
-
-a{
-    text-decoration: none;
-
-}
-
-.box {
-    width: 300px;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 25px;
-}
-
-.slide-img{
-    height: 450px;
-    position: relative;
-}
-
-.slide-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-
-.detail-box{
+body{
+    background: rgb(252, 2, 2);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: 1000;
+    padding: 30px 100px;
 }
 
-.type{
+header .logo{
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header ul{
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.type a{
-    color: #222222;
-    margin: 5px 0px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    padding-right: 8px;
+header ul li{
+    position: relative;
+    list-style: none;
+    margin-left: 40px;
 }
-
-.text span{
-    color: rgba(26,26,26,0.5);
+header ul li a{
+    color: #fff;
+    text-decoration: none;
 }
-
-.price{
-    color: #333333;
-    font-weight: 700;
-    font-family: cursive;
-    letter-spacing: 0.5px;
-    
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
 }
-
-.overlay{
+.banner .imgBx{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+}
+.banner .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: rgba(92,95,236,0.6);
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.5s; 
+    background-position: center;
+}
+.banner .imgBx img.active{
+    opacity: 1;
+}
+.controls{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 80px;
+}
+.controls li{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
-.buy-btn{
-    width: 160px;
-    height: 40px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    color: #252525;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 20px;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+.controls li:hover{
+    background: #ffeb3b;
 }
 
-.buy-btn:hover{
-    color: #ffffff;
-    background-color: #f15fa3;
-    transition: all ease 0.3s;
+.controls li:before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid #111;
+    border-bottom: 3px solid #111;
+    transform: rotate(45deg);
 }
-
-.overlay{
-  visibility: hidden;
+.controls li:nth-child(2):before{
+    transform: rotate(225deg);
 }
-
-.slide-img:hover .overlay{
-    visibility: visible;
-    animation: fade 0.5s;
+.contentBx{
+    position: absolute;
+    bottom: 0;
+    max-width: 700px;
 }
-@keyframes fade{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+.contentBx div{
+    display: none;
 }
-.slider{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contentBx div.active{
+    display: block;
+    padding: 30px;
+    padding-left: 100px;
+    background: rgba(0, 0, 0, 0.4);
+}
+.contentBx div h2{
+    color: #fff;
+    font-size: 2em;
+}
+.contentBx div p{
+    color: #fff;
+    font-size: 1.1em;
+}
+.contentBx div a{
+    color: #111;
+    font-size: 1.1em;
+    display: inline-block;
+    padding-left: 10px 30px;
+    background: #fff;
+    border: 6px solid #fff;
+    margin-top: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
