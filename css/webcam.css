@@ -11,13 +11,19 @@
 .popup{
     background-color: #fb80c8;
     width: 90%;
-    height: 85%;
+    min-height: 100px;
+    overflow: hidden;
     padding: 30px 40px;
     position: absolute;
     text-align: center;
     border-radius: 8px;
     display: none;
+    z-index: 5;
     border: 2px solid black;
+}
+
+.container#blur .active{
+    filter: blur(20px);
 }
 
 .popup button{
@@ -50,7 +56,7 @@
 
 body{
     margin: 50px;
-    font-size: 2em;
+    font-size: 30px;
     font-family: 'Love Ya Like A Sister', cursive;
 }
 
@@ -73,15 +79,22 @@ body{
 
 @media (max-width: 500px){
     body{
+    font-size: 15px;
     margin: 2px;
+}
+.popup{
+    margin: 25px;
 }
     #videoElement{
         width: 150px;
-        height: 250px;
+        height: 350px;
         float: right;
     }
 }
 @media (max-width: 800px){
+    body{
+        font-size: 18px;
+    }
     #videoElement{
         height: 100px;
         width: 100px;

@@ -16,12 +16,12 @@
 
             </div>
             <div>
-                <h2>Waiting?</h2>
-                <p>Maybe you see another popup after this, this is because the person you want to talk now is busy with makeup or any stuff. Don't panic you time will start when she joined call.</p>
-                <h2>Banned?</h2>
-                <p>You will be banned if you asked for whatsapp number or any other social media.</p>
-                <h2>Other issues?</h2>
-                <p>Contact Us if you have any other issues related to this website</p>
+                <h2>Heading1</h2>
+                <p>lorem50.</p>
+                <h2>Heading2</h2>
+                <p>lorem50.</p>
+                <h2>heading3</h2>
+                <p>lorem20</p>
            
             </div>
         </div>
@@ -59,5 +59,9 @@ navigator.mediaDevices.getUserMedia({video: true ,audio: true})
     document.querySelector("#close").addEventListener("click", function(){
         document.querySelector(".popup").style.display = "none";
     });
+    function toggle(){
+        var blur = document.getElementById("container");
+        blur.classList.toggle("active")
+    }
 </script>
 </html>
