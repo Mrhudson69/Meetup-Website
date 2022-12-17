@@ -115,7 +115,7 @@ header ul li a{
 .contentBx div.active{
     display: block;
     padding: 30px;
-    padding-left: 100px;
+    padding-left: 30px;
     background: rgba(0, 0, 0, 0.4);
 }
 .contentBx div h2{
