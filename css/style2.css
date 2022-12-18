@@ -18,6 +18,7 @@ header{
     justify-content: space-between;
     z-index: 1000;
     padding: 30px 100px;
+    background: #05020269;
 }
 
 header .logo{
@@ -179,7 +180,7 @@ header ul li .active1:after{
         background: #00000077;
         width: 100%;
         left: 0;
-        top: 85px;
+        top: 92px;
         padding: 10px 0px 20px 0px;
         border-top: 1px solid #4b0d0d86;
         clip-path: circle(0% at 100% -150%);
@@ -198,12 +199,18 @@ header ul li .active1:after{
     }
     .mobile-nav{
         display: block;
-        margin: 1px;
+        margin-top: -7px;
+        margin-left: 30px;
+        font-size: 30px;
     }
     .mobile-menu{
         clip-path: circle(100% at 100%);
     }
     .primary-menu li a:after{
         display: none;
+    }
+    header{
+        height: 90px;
+        margin-top: -20px;
     }
 }
