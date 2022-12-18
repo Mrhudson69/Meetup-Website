@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    transition: all 0.3 linear;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #74ebd5;
+    background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+}
+.box{
+    width: 300px;
+    height: 455px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 80px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.box h1{
+    font-size: 35px;
+    padding: 20px 0;
+    color: #444;
+}
+.box p{
+    font-size: 15px;
+    color: #777;
+}
+
+.box button{
+    width: 220px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.box button:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.box::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.box::after{
+    width: 100%;
+    height: 100%;
+    background-color: #fbda61;
+    background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    clip-path: circle(20% at 90% 10%);
+    transition: .2s;
+}
+
+.box .count{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.box:nth-child(2):after{
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+.box:nth-child(3):after{
+    background-color: #08aeea;
+    background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+}
+
+.box:hover::after{
+    clip-path: circle(100%);
+}
+
+.box:hover p{
+    color: #fff;
+}
+.box:hover h1{
+    color: #fff;
+}
+

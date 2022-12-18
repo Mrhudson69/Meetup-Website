@@ -15,6 +15,7 @@ body{
 
 .box{
     border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.678);
     display: table;
     margin: 0 auto;
     font-size: 30px;
@@ -23,7 +24,7 @@ body{
     z-index: 30;
 }
 .container{
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.774);
     display: block;
     align-items: center;
     justify-content: center;
@@ -44,4 +45,9 @@ body{
     border-radius: 2px;
     padding: 3px;
     margin: 10px;
+    text-decoration: none;
+    background-color: rgba(255, 7, 7, 0.521);
+}
+.rules{
+    text-align: left;
 }
