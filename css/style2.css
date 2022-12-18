@@ -44,6 +44,37 @@ header ul li a{
     color: #fff;
     text-decoration: none;
 }
+header ul li a:hover,
+header ul .active1{
+    color: red;
+    font-weight: 600;
+}
+header ul li a:after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 3, 3);
+    bottom: 0px;
+    left: 0;
+    transition: all .5s;
+}
+header ul li a:hover:after{
+    width: 100%;
+}
+header ul li .active1:after{
+    width: 100%;
+}
+.mobile-nav{
+    display: none;
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
 .banner{
     position: relative;
     width: 100%;
@@ -138,4 +169,41 @@ header ul li a{
     text-decoration: none;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+/* Responsive css */
+@media only screen and (max-width: 900px){
+    .site-nav-menu{
+        float: none;
+        position: absolute;
+        background: #00000077;
+        width: 100%;
+        left: 0;
+        top: 85px;
+        padding: 30px 0px 50px 0px;
+        border-top: 1px solid #4b0d0d86;
+        clip-path: circle(0% at 100% -150%);
+        transition: all 0.8s;
+    }
+    header ul{
+        display: grid;
+        text-align: center;
+        font-size: 30px;
+        margin: 15px 5px;
+        padding-left: 10%;
+
+    }
+    header ul li{
+        margin-top: 30px;
+    }
+    .mobile-nav{
+        display: block;
+        margin: 1px;
+    }
+    .mobile-menu{
+        clip-path: circle(100% at 100%);
+    }
+    .primary-menu li a:after{
+        display: none;
+    }
 }

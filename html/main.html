@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style2.css">
+    <script src="https://kit.fontawesome.com/ac8b6f835f.js" crossorigin="anonymous"></script>
     <title>Meetup-Website</title>
 </head>
 <body>
     <header>
         <a href="#" class="logo">Girlfriends</a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Store</a></li>
-            <li><a href="#">Contact</a></li>
+        <div class="mobile-nav">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="site-nav-menu">
+        <ul class="primary-menu">
+            <li><a href="#" class="active1">Become a Partner</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Q & A</a></li>
         </ul>
+    </div>
     </header>
     <section class="banner">
         <div class="imgBx">
@@ -101,6 +108,14 @@
             j = (j - 1 + slidesText.length) % slidesText.length;
             slidesText[j].classList.add('active');
         }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".mobile-nav i").click(function(){
+                $(".site-nav-menu").toggleClass("mobile-menu");
+            })
+        })
     </script>
 </body>
 </html>
