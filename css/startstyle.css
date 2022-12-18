@@ -63,18 +63,13 @@ svg{
 
 /* Media Query for mobile phone */
 @media only screen and (max-width: 900px){
-    svg{
-        height: 750px;
-    }
     .btn{
         margin: 1px;
     }
     
 }
 @media only screen and (max-width: 400px){
-    svg{
-        height: 1900px;
-    }
+
     .btn{
         margin: 1px;
         padding: 2px;
