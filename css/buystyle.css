@@ -45,6 +45,10 @@
     color: #777;
 }
 
+.box img{
+    height: 60px;
+}
+
 .box button{
     width: 220px;
     height: 40px;
