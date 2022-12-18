@@ -6,16 +6,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: black;
 }
 body{
-    background: url("../img/start_bg.jpg");
-    background-size: cover;
+    background: rgb(168, 255, 133);
 }
 
 .box{
-    border: 2px solid white;
-    background-color: rgba(0, 0, 0, 0.678);
     display: table;
     margin: 0 auto;
     font-size: 30px;
@@ -24,25 +21,28 @@ body{
     z-index: 30;
 }
 .container{
-    background-color: rgba(0, 0, 0, 0.774);
     display: block;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 2px solid white;
     margin: 25px;
     margin-left: 10%;
     margin-right: 12%;
     padding: 20px;
     padding-left: 30px;
     padding-right: 30px;
+    position: relative;
+    z-index: 10;
 }
 .container ul{
     list-style: none;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.651);
+}
+.container h2{
+    border-bottom: 2px solid rgba(255, 0, 0, 0.651);
 }
 .btn{
-    border: 1px solid wheat;
-    border-radius: 2px;
+    border-radius: 3px;
     padding: 3px;
     margin: 10px;
     text-decoration: none;
@@ -50,4 +50,10 @@ body{
 }
 .rules{
     text-align: left;
+}
+svg{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
