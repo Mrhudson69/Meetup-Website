@@ -9,8 +9,9 @@
     color: black;
 }
 body{
-    background: rgb(168, 255, 133);
+    background: rgb(239, 241, 239);
 }
+
 
 .box{
     display: table;
@@ -52,8 +53,157 @@ body{
     text-align: left;
 }
 svg{
-    z-index: 1;
+    z-index: -100;
     position: absolute;
     top: 0;
     left: 0;
+    height: 700px;
+}
+
+
+/* Media Query for mobile phone */
+@media only screen and (max-width: 900px){
+    svg{
+        height: 750px;
+    }
+    .btn{
+        margin: 1px;
+    }
+    .fa-bars:before, .fa-navicon:before {
+        content: "\f0c9";
+    }
+    
+}
+@media only screen and (max-width: 400px){
+    svg{
+        height: 1900px;
+    }
+    .btn{
+        margin: 1px;
+        padding: 2px;
+    }
+    .container p{
+        margin-top: 10px;
+    }
+    .container h2{
+        padding-top: 5px;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        border-top: 2px solid rgba(255, 0, 0, 0.651);
+    }
+}
+
+
+
+/* Header Copy pasted */
+
+header{
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 30px 100px;
+    background: #05020269;
+}
+
+header .logo{
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+    margin-left: 40px;
+}
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+header ul li a:hover,
+header ul .active1{
+    color: red;
+    font-weight: 600;
+}
+header ul li a:after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 3, 3);
+    bottom: 0px;
+    left: 0;
+    transition: all .5s;
+}
+header ul li a:hover:after{
+    width: 100%;
+}
+header ul li .active1:after{
+    width: 100%;
+}
+.mobile-nav{
+    display: none;
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Responsive css */
+@media only screen and (max-width: 900px){
+    .site-nav-menu{
+        float: none;
+        position: absolute;
+        background: #000000ef;
+        width: 100%;
+        left: 0;
+        top: 92px;
+        padding: 10px 0px 20px 0px;
+        clip-path: circle(0% at 100% -150%);
+        transition: all 0.8s;
+        z-index: 200;
+    }
+    header ul{
+        display: grid;
+        text-align: center;
+        font-size: 30px;
+        margin: 15px 5px;
+        padding-left: 10%;
+
+    }
+    header ul li{
+        margin-top: 5px;
+    }
+    .mobile-nav{
+        display: block;
+        margin-top: -7px;
+        margin-left: 30px;
+        font-size: 30px;
+    }
+    .mobile-menu{
+        clip-path: circle(100% at 100%);
+    }
+    .primary-menu li a:after{
+        display: none;
+    }
+    header{
+        height: 90px;
+        margin-top: -20px;
+    }
 }

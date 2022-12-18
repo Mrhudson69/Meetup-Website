@@ -8,6 +8,21 @@
     <title>Buy Now - Page</title>
 </head>
 <body>
+    <header>
+        <a href="#" class="logo">Conditions</a>
+        <div class="mobile-nav">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="site-nav-menu">
+        <ul class="primary-menu">
+            <li><a href="#" class="active1">Become a Partner</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Q & A</a></li>
+        </ul>
+    </div>
+    </header>
     <section>
     <div>
         
@@ -101,6 +116,13 @@
     </div>
 </section>
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".mobile-nav i").click(function(){
+                $(".site-nav-menu").toggleClass("mobile-menu");
+            })
+        })
+    </script>
 </body>
 </html>
