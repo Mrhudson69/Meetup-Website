@@ -8,10 +8,10 @@
     font-family: 'Poppins', sans-serif;
     /* color: black; */
 }
-body{
-    background: rgb(239, 241, 239);
-}
-
+body {
+    background: rgb(43,31,255);
+    background: linear-gradient(90deg, rgba(43,31,255,1) 0%, rgba(8,245,19,1) 0%, rgba(0,212,255,1) 100%);
+  }
 
 .box{
     display: table;
@@ -47,7 +47,8 @@ body{
     padding: 3px;
     margin: 10px;
     text-decoration: none;
-    background-color: rgba(255, 7, 7, 0.521);
+    background-color: red;
+    color: #fff;
 }
 .rules{
     text-align: left;
@@ -162,7 +163,8 @@ header ul li .active1:after{
     .site-nav-menu{
         float: none;
         position: absolute;
-        background: #000000ef;
+        background: rgb(31,255,237);
+        background: linear-gradient(90deg, rgba(31,255,237,1) 0%, rgba(0,255,119,1) 100%);
         width: 100%;
         left: 0;
         top: 92px;
