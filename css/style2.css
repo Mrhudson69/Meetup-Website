@@ -180,7 +180,7 @@ header ul li .active1:after{
         width: 100%;
         left: 0;
         top: 85px;
-        padding: 30px 0px 50px 0px;
+        padding: 10px 0px 20px 0px;
         border-top: 1px solid #4b0d0d86;
         clip-path: circle(0% at 100% -150%);
         transition: all 0.8s;
@@ -194,7 +194,7 @@ header ul li .active1:after{
 
     }
     header ul li{
-        margin-top: 30px;
+        margin-top: 5px;
     }
     .mobile-nav{
         display: block;
