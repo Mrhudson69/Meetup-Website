@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: black;
+    /* color: black; */
 }
 body{
     background: rgb(239, 241, 239);
@@ -68,9 +68,6 @@ svg{
     }
     .btn{
         margin: 1px;
-    }
-    .fa-bars:before, .fa-navicon:before {
-        content: "\f0c9";
     }
     
 }
