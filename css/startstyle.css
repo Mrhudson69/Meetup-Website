@@ -149,77 +149,47 @@ header ul li .active1:after{
 }
 .mobile-nav{
     display: none;
-    float: right;
-    margin: 10px;
-    padding: 10px;
+    position: absolute;
+    top: 35px;
+    right: 50px;
     font-size: 24px;
     color: #fff;
     outline: none;
     cursor: pointer;
 }
 
+
 /* Responsive css */
 @media only screen and (max-width: 900px){
     .site-nav-menu{
-        float: none;
-        position: absolute;
-        background: rgb(31,255,237);
-        background: linear-gradient(90deg, rgba(31,255,237,1) 0%, rgba(0,255,119,1) 100%);
-        width: 100%;
+        top: 0;
         left: 0;
-        top: 92px;
-        padding: 10px 0px 20px 0px;
-        clip-path: circle(0% at 100% -150%);
-        transition: all 0.8s;
-        z-index: 200;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.299);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        z-index: 20;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu{
+        margin-left: 0;
     }
     header ul{
-        display: grid;
-        text-align: center;
-        font-size: 30px;
-        margin: 15px 5px;
-        padding-left: 10%;
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     header ul li{
-        margin-top: 5px;
+        margin: 0.5em 0;
+        font-size: 1.4em;
     }
     .mobile-nav{
         display: block;
-        margin-top: -7px;
-        margin-left: 30px;
-        font-size: 30px;
-    }
-    .mobile-menu{
-        clip-path: circle(100% at 100%);
-    }
-    .primary-menu li a:after{
-        display: none;
-    }
-    header{
-        height: 90px;
-        margin-top: -20px;
+        z-index: 30;
     }
 }
-
-
-/* Timer */
-
-/* Sets the containers height and width */
-.base-timer {
-    position: relative;
-    height: 10px;
-    width: 10px;
-  }
-  
-  /* Removes SVG styling that would hide the time label */
-  .base-timer__circle {
-    fill: none;
-    stroke: none;
-  }
-  
-  /* The SVG path that displays the timer's progress */
-  .base-timer__path-elapsed {
-    stroke-width: 2px;
-    stroke: grey;
-  }
