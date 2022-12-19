@@ -195,7 +195,7 @@ header ul li .active1:after{
     .site-nav-menu{
         float: none;
         position: absolute;
-        background: #00000077;
+        background: #000000;
         width: 100%;
         left: 0;
         top: 92px;
@@ -203,7 +203,9 @@ header ul li .active1:after{
         border-top: 1px solid #4b0d0d86;
         clip-path: circle(0% at 100% -150%);
         transition: all 0.8s;
+        z-index: 100;
     }
+
     header ul{
         display: grid;
         text-align: center;
