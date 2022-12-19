@@ -9,6 +9,22 @@
     <title>Select a pack you want to buy</title>
 </head>
 <body>
+    <header>
+        <a href="#" class="logo">Choose one</a>
+        <div class="mobile-nav">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="site-nav-menu">
+        <ul class="primary-menu">
+            <li><a href="./partner.html" class="active1">Become a Partner</a></li>
+            <li><a href="./main.html">Home</a></li>
+            <li><a href="./aboutus.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="./qanda.html">Q & A</a></li>
+        </ul>
+    </div>
+    </header>
     <div class="container">
         <div class="box">
             <img src="../img/award.png" alt="">
@@ -35,6 +51,13 @@
             <span class="count">3</span>
         </div>
     </div>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".mobile-nav i").click(function(){
+                $(".site-nav-menu").toggleClass("mobile-menu");
+            })
+        })
+    </script>
 </body>
 </html>
