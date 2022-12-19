@@ -207,5 +207,18 @@ header ul li .active1:after{
     .mobile-nav{
         display: block;
         z-index: 30;
+        margin: -11px;
+        padding: 7px;
+    }
+    header .logo{
+        top: -12px;
+        left: -74px;
+    }
+    header{
+        height: 80px;
+    }
+    .controls{
+        width: 60px;
+        height: 60px;
     }
 }
