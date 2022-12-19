@@ -201,3 +201,25 @@ header ul li .active1:after{
         margin-top: -20px;
     }
 }
+
+
+/* Timer */
+
+/* Sets the containers height and width */
+.base-timer {
+    position: relative;
+    height: 10px;
+    width: 10px;
+  }
+  
+  /* Removes SVG styling that would hide the time label */
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  /* The SVG path that displays the timer's progress */
+  .base-timer__path-elapsed {
+    stroke-width: 2px;
+    stroke: grey;
+  }
