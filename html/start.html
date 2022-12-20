@@ -39,17 +39,17 @@
         <p>Yeah! There are some rules you need to read and follow before starting call with your partner, if you don't like the rules you can quit this website</p>
         <br>
         <ul class="rules">
-            <li>1. Harrashment is strictly prohibited.</li>
-            <li>2. If you ask your partner to do other stuffs call can be dsconnected by your partner.</li>
+            <li>1. Harassment is strictly prohibited.</li>
+            <li>2. If you ask your partner to do other stuffs call can be disconnected by your partner.</li>
             <li>3. Please be in a silent place</li>
             <li>4. This charges will not refundable</li>
-            <li>5. Please check your internet speed before starting a call it must be more than 2mbps upload & Download</li>
+            <li>5. Please check your internet speed before starting a call it must be more than 2Mb's upload & Download</li>
             <li>6. You not be drunk on call</li>
             <li>7. Be polite on call</li>
             <li>8. You Must be 18+ for using this site</li>
         </ul>
         <br>
-        <a id="chh" href="./buy.html" class="btn">&nbsp;Okay I accept to these terms&nbsp;</a>
+        <a id="chh" data-timer="30" class="btn">&nbsp;Okay I accept to these terms&nbsp;</a>
     </div>
 </section>
 
@@ -60,13 +60,39 @@
                 $(".site-nav-menu").toggleClass("mobile-menu");
             })
         })
-        var disabledClick = function(){ 
-            return false 
-        };
-        $('#chh').on( "click", disabledClick );
-        setTimeout(function(){
-            $('a').off( "click", disabledClick );
-        }, 10000);
+        // var disabledClick = function(){ 
+        //     return false 
+        // };
+        // $('#chh').on( "click", disabledClick );
+        // setTimeout(function(){
+        //     $('a').off( "click", disabledClick );
+        // }, 10000);
+
+        const waitBtn = document.querySelector('.btn');
+        const waitLink = ('./buy.html')
+
+        initTimer = () => {
+            let timer = waitBtn.dataset.timer;
+            waitBtn.classList.add("timer");
+            waitBtn.innerHTML = `Please wait for <b>${timer}</b> seconds`;
+            const initCounter = setInterval(() => {
+                if(timer > 0){
+                timer--;
+                 return waitBtn.innerHTML = `Please wait for <b>${timer}</b> seconds`;
+                }
+                clearInterval(initCounter);
+                location.href = waitLink;
+                waitBtn.textContent = "Have Fun..."
+
+                // setTimeout(() => {
+                //     waitBtn.classList.replace("timer", "disable-timer");
+                //     waitBtn.innerHTML = `ok`
+                // },3000)
+            },1000);
+        }
+
+        waitBtn.addEventListener("click", initTimer);
+
         </script>
 </body>
 </html>

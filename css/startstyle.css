@@ -60,6 +60,9 @@ svg{
     left: 0;
     height: 700px;
 }
+section a .timer b{
+    color: blue;
+}
 
 
 /* Media Query for mobile phone */

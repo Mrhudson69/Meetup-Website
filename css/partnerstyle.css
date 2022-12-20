@@ -80,6 +80,9 @@ header ul li .active1:after{
     outline: none;
     cursor: pointer;
 }
+header .logo{
+    cursor: default;
+}
 
 
 /* Responsive css */
@@ -123,10 +126,14 @@ header ul li .active1:after{
         height: 80px;
     }
     header .logo{
-        top: -15px;
+        top: -10px;
         left: -60px;
+        font-size: 25px;
     }
     .mobile-menu ul li a{
         color: black;
+    }
+    header .logo a{
+        cursor: default;
     }
 }
