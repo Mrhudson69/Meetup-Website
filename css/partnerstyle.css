@@ -137,3 +137,60 @@ header .logo{
         cursor: default;
     }
 }
+
+/* Section Paragraph main heading */
+
+body{
+    background: #121212;
+}
+
+.container {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .GradientBorder {
+    position: relative;
+    padding: 20px;
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    background: #020117;
+  }
+  .onee{
+    font-size: 1.5em;
+  }
+  .GradientBorder::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+    z-index: -1;
+  }
+  .GradientBorder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+    z-index: -2;
+    filter: blur(40px);
+  }
+
+
+
+
+
+
+
+
+
+
+
