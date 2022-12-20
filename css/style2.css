@@ -217,8 +217,5 @@ header ul li .active1:after{
     header{
         height: 80px;
     }
-    .controls{
-        width: 60px;
-        height: 60px;
-    }
+    
 }
