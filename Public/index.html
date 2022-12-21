@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    
     <title>Indian-O-Meetup</title>
 </head>
 <body>
-    <div class="alert-box">
-        <p class="alert">Message</p>
-    </div>
     <div class="hero">
         <div class="form-box">
 <div class="button-box">
@@ -28,7 +26,7 @@
     <input type="text" name="Uname" class="input-field" placeholder="User Id" required>
     <input type="password" name="Pass" class="input-field" placeholder="Enter Password" required>
     <input type="checkbox" class="check-box"> <span class="checkBx">Remember Password</span>
-    <button type="submit" name="log" class="submit-btn" onclick="location.href='./html/main.html';return false">Log In</button>
+    <button type="submit" name="log" class="submit-btn">Log In</button>
 </form>
 <form id="register" class="input-group">
     <input type="text" class="input-field" placeholder="User Id" required>
@@ -40,8 +38,10 @@
         </div>
         
     </div>
-    <script>
-        var x = document.getElementById("login");
+    <script type="text/javascript">
+
+
+var x = document.getElementById("login");
         var y = document.getElementById("register");
         var z = document.getElementById("btn");
 
@@ -55,13 +55,67 @@
             y.style.left = "450px";
             z.style.left = "0px";
         }
-        const form = [...document.querySelector('.form').children];
 
-        form.forEach((item, i) => {
-            setTimeout(() => {
-                item.style.opacity = 1;
-            }, i*100);
+        const name = document.querySelector('.text') || null;
+const email = document.querySelector('.email');
+const password = document.querySelector('.password');
+const submitBtn = document.querySelector('.submit-btn')
+
+if(name == null){
+    submitBtn.addEventListener('click',() => {
+        fetch('/login-user',{
+            method: 'post',
+            headers: new Headers({'Content-Type': 'application/json'}),
+            body: JSON.stringify({
+                email: email.value,
+                password: password.value
+            })
         })
+        .then(res => res.json())
+        .then(data => {
+            validate(data);
+        })
+    })
+} else{ //means register page is open
+
+    submitBtn.addEventListener('click',() => {
+        fetch('/register-user',{
+            method: 'post',
+            headers: new Headers({'Content-Type': 'application/json'}),
+            body: JSON.stringify({
+                name: text.value,
+                email: email.value,
+                password: password.value
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            validate(data);
+        })
+    })
+}
+
+const validateData = (data) => {
+    if(!data.name){
+        alertBox(data);
+    } else {
+        sessionStorage.name = data.name;
+        sessionStorage.email = data.email;
+        location.href = './';
+    }
+}
+
+const alertBox = (data) => {
+    const alertContainer = document.querySelector('.alert-box');
+    const alertMsg = document.querySelector('.alert');
+    alertMsg.innerHTML = data;
+
+    alertContainer.style.top = `5%`;
+    setTimeout(() => {
+        alertContainer.style.top = null;
+    }, 5000);
+}
+   
     </script>
 </body>
 </html>
