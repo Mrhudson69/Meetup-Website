@@ -66,10 +66,10 @@
         // $('#chh').on( "click", disabledClick );
         // setTimeout(function(){
         //     $('a').off( "click", disabledClick );
-        // }, 10000);
+        // }, 300000);
 
         const waitBtn = document.querySelector('.btn');
-        const waitLink = ('./buy.html')
+        const waitLink = ('./buy.html'  )
 
         initTimer = () => {
             let timer = waitBtn.dataset.timer;
@@ -84,11 +84,11 @@
                 location.href = waitLink;
                 waitBtn.textContent = "Have Fun..."
 
-                // setTimeout(() => {
-                //     waitBtn.classList.replace("timer", "disable-timer");
-                //     waitBtn.innerHTML = `ok`
-                // },3000)
-            },1000);
+            //     setTimeout(() => {
+            //         waitBtn.classList.replace("timer", "disable-timer");
+            //         waitBtn.innerHTML = `ok`
+            //     },3000)
+               },1000);
         }
 
         waitBtn.addEventListener("click", initTimer);

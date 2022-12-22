@@ -49,6 +49,7 @@ body {
     text-decoration: none;
     background-color: red;
     color: #fff;
+    cursor: pointer;
 }
 .rules{
     text-align: left;
